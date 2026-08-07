@@ -1,7 +1,17 @@
 import os
 import random
 
-def thanos_project(folder_path, num_files):
+def thanos_project(folder_path: str, num_files: int) -> None:
+    """
+    Create a folder, generate a number of text files,
+    then randomly delete half of them (Thanos snap).
+    param folder_path: The name or path of the folder to create.
+    type folder_path: str
+    param num_files: The number of text files to generate.
+    type num_files: int
+    return: None
+    rtype: None
+    """
     if not os.path.exists(folder_path):
         os.mkdir(folder_path)
     for i in range(1, num_files + 1):
@@ -23,7 +33,7 @@ def thanos_project(folder_path, num_files):
     print(remaining_files)
     print("Number of remaining files:", len(remaining_files))
 
-folder = input("Enter folder name: ")
-number = int(input("Enter number of files: "))
+folder: str = input("Enter folder name: ")
+number: int = int(input("Enter number of files: "))
 
 thanos_project(folder, number)
