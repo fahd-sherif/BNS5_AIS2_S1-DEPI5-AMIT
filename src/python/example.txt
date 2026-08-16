@@ -1,0 +1,3 @@
+Hello Python
+I am learning OOP
+This is a text file
